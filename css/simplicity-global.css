@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Raleway:wght@400;700;800&display=swap');
+
+*{box-sizing: border-box;}
+
+html{ font-size: 14px;}
+
+body, h1, h2, p, figure, .menu{
+    margin: 0;
+    padding: 0;
+}
+
+img{ max-width: 100%;}
+
+body{
+    font-family: 'Noto Sans',sans-serif, Verdana,Arial, Helvetica, Geneva, Tahoma;
+    background-color: #fff;
+}
+
+a{ text-decoration: none; }
+
+h1 a{ 
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+h1{
+    /* Google Fonts */
+    font-family: Raleway,sans-serif, Verdana,Arial, Geneva, Tahoma, Helvetica, ;
+    font-weight: 800;
+    font-size: 1.5rem;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+nav h2 a{
+    color: black;
+    font-size: 1.2rem;
+    display: inline-block; 
+    padding: 1rem;
+}
+
+nav a:hover, nav a:focus{
+    background-color: rgba(118, 118, 118, 0.552);
+}
+.menu{
+   list-style: none; 
+   display: none;
+}
+
+.menu a{
+    font-weight: bold;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.destaque{
+    background-image: url(../imagens/fundo-destaque.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+    height: 90vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.destaque h2, .destaque p{
+    color: #fff;
+    text-align: center;
+}
+
+.destaque h2{
+    font-size: clamp(3rem, 3vw + 2vw, 5vw);
+    font-family: Raleway,sans-serif,Arial, Helvetica ;
+    font-weight: 800;
+}
+
+.destaque p{
+    font-size:clamp(1.2rem, 1.2rem + 0.8vw, 2rem);
+    font-weight: bold;
+}
