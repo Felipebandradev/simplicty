@@ -34,9 +34,16 @@ h1{
 }
 
 header{
+    /* cabeçalho fixo */
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;   
+}
+
+header .limitador{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     height: 10vh;
 }
 
@@ -79,15 +86,105 @@ nav a:hover, nav a:focus{
 .destaque h2, .destaque p{
     color: #fff;
     text-align: center;
+    
 }
 
 .destaque h2{
-    font-size: clamp(3rem, 3vw + 2vw, 5vw);
+    /* função clamp utiliza o valor mninímo,desejavel e valor máximo. */
+    font-size: clamp(3rem,10vw, 6rem);
     font-family: Raleway,sans-serif,Arial, Helvetica ;
     font-weight: 800;
+    animation: animadestaque 2s;
 }
 
 .destaque p{
-    font-size:clamp(1.2rem, 1.2rem + 0.8vw, 2rem);
+    font-size:clamp(1.1rem, 3vw, 2rem);
     font-weight: bold;
+    animation: animadestaque 3s cubic-bezier(0.23, 1, 0.320, 1);
+    animation-delay: 1s;
+    animation-fill-mode: backwards; 
+    /* e usada para atrasar
+    animation-delay:
+    e usada para corrigir o delay
+     animation-fill-mode: backwards; */
+}
+
+/* etapa 1: criar regra de animação */
+@keyframes animadestaque{
+    /* dê */
+    from{
+        opacity: 0;
+        transform: translateY(-350px);
+    }
+    /* para */
+    to{
+        opacity: 1;
+    }
+}
+
+article h2{
+    padding: 1rem;
+    font-family: Raleway,sans-serif,Arial, Helvetica;
+    color: #6b6b6b;
+    font-size: 1.8rem;
+}
+
+article p, article address {
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+}
+
+/* remover o italico do address */
+article address{
+    font-style: normal;
+}
+
+.front-end, .historia, .localizacao, footer{ text-align: center;}
+
+.historia{
+    background-image: url(../imagens/fundo-madeira.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.historia h2{
+    text-shadow: black 5px 5px 10px;
+    color: rgb(255, 255, 255);
+}
+
+iframe{ width: 100%;}
+
+.historia iframe{
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+.localizacao iframe{
+    margin-top: 2rem;
+}
+
+
+.front-end figure{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.limitador{
+    margin: auto;
+    width: 95vw;
+}
+
+footer{
+    background-color: black;
+    color: #fff;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.conteudo{
+    background-color: #d9d8d8;
+    padding: 0.5rem;
+    border-radius: 8px;
 }
